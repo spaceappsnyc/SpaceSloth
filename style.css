@@ -1,0 +1,103 @@
+div {
+  height: 750px;
+  width: 33.3%;
+  float: left;
+}
+
+.box {
+  width: 100%;
+  height: 375px;
+}
+
+.zero {
+  background-color: #000000;
+}
+
+.one {
+  background-color: #111111;
+}
+
+.two {
+  background-color: #222222;
+}
+.three {
+  background-color: #333333;
+}
+
+.four {
+  background-color: #444444;
+}
+
+.five {
+  background-color: #555555;
+}
+
+.six {
+  background-color: #666666;
+}
+
+.seven {
+  background-color: #777777;
+}
+
+.eight {
+  background-color: #888888;
+}
+
+.nine {
+  background-color: #999999;
+}
+
+.ten {
+  background-color: #aaaaaa;
+}
+
+.trans {
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+/*.zerocam {
+  background-color: #000000;
+}
+
+.onecam {
+  background-color: #0C1210;
+}
+
+.twocam {
+  background-color: #222260;
+}
+.threecam {
+  background-color: #333360;
+}
+
+.fourcam {
+  background-color: #444460;
+}
+
+.fivecam {
+  background-color: #555560;
+}
+
+.sixcam {
+  background-color: #666660;
+}
+
+.sevencam {
+  background-color: #777760;
+}
+
+.eightcam {
+  background-color: #888860;
+}
+
+.ninecam {
+  background-color: #999960;
+}
+
+.tencam {
+  background-color: #aaaa60;
+}*/

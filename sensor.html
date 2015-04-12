@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SpaceAppsNYC</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+  </head>
+
+  <body>
+    <div id="left" ></div>
+    <div id="center"></div>
+    <div id="right"></div>
+  </body>
+
+  <script>
+  setInterval(function(){
+    var sensor1;
+    var sensor2;
+    var sensor3;
+
+    $.ajax({
+      dataType: "json",
+      url: "http://192.168.0.109:3000/sensors",
+      success:
+        function( data ) {
+          sensor1 = data.sensor1;
+          sensor2 = data.sensor2;
+          sensor3 = data.sensor3;
+          console.log("sensor1: " + sensor1);
+          console.log("sensor2: " + sensor2);
+          console.log("sensor3: " + sensor3);
+
+
+      if (sensor1 < 60){
+        $(left).addClass('zero').removeClass('one two three four five six seven eight nine ten');
+      } else if (sensor1 > 60 && sensor1 < 120) {
+        $(left).addClass('one').removeClass('zero two three four five six seven eight nine ten');
+      } else if (sensor1 > 120 && sensor1 < 180) {
+        $(left).addClass('two').removeClass('zero one three four five six seven eight nine ten');
+      } else if (sensor1 > 180 && sensor1 < 240) {
+        $(left).addClass('three').removeClass('zero one two four five six seven eight nine ten');
+      } else if (sensor1 > 240 && sensor1 < 300) {
+        $(left).addClass('four').removeClass('zero one two three five six seven eight nine ten');
+      } else if (sensor1 > 300 && sensor1 < 360) {
+        $(left).addClass('five').removeClass('zero one two three four six seven eight nine ten');
+      } else if (sensor1 > 360 && sensor1 < 420) {
+        $(left).addClass('six').removeClass('zero one two three four five seven eight nine ten');
+      } else if (sensor1 > 420 && sensor1 < 480) {
+        $(left).addClass('seven').removeClass('zero one two three four five six eight nine ten');
+      } else if (sensor1 > 480 && sensor1 < 540) {
+        $(left).addClass('eight').removeClass('zero one two three four five six seven nine ten');
+      } else if (sensor1 > 540 && sensor1 < 600) {
+        $(left).addClass('nine').removeClass('zero one two three four five six seven eight ten');
+      } else {
+        $(left).addClass('ten').removeClass('zero one two three four five six seven eight nine');
+      }
+      if (sensor2 < 60){
+        $(center).addClass('zero').removeClass('one two three four five six seven eight nine ten');
+      } else if (sensor2 > 60 && sensor2 < 120) {
+        $(center).addClass('one').removeClass('zero two three four five six seven eight nine ten');
+      } else if (sensor2 > 120 && sensor2 < 180) {
+        $(center).addClass('two').removeClass('zero one three four five six seven eight nine ten');
+      } else if (sensor2 > 180 && sensor2 < 240) {
+        $(center).addClass('three').removeClass('zero one two four five six seven eight nine ten');
+      } else if (sensor2 > 240 && sensor2 < 300) {
+        $(center).addClass('four').removeClass('zero one two three five six seven eight nine ten');
+      } else if (sensor2 > 300 && sensor2 < 360) {
+        $(center).addClass('five').removeClass('zero one two three four six seven eight nine ten');
+      } else if (sensor2 > 360 && sensor2 < 420) {
+        $(center).addClass('six').removeClass('zero one two three four five seven eight nine ten');
+      } else if (sensor2 > 420 && sensor2 < 480) {
+        $(center).addClass('seven').removeClass('zero one two three four five six eight nine ten');
+      } else if (sensor2 > 480 && sensor2 < 540) {
+        $(center).addClass('eight').removeClass('zero one two three four five six seven nine ten');
+      } else if (sensor2 > 540 && sensor2 < 600) {
+        $(center).addClass('nine').removeClass('zero one two three four five six seven eight ten');
+      } else {
+        $(center).addClass('ten').removeClass('zero one two three four five six seven eight nine');
+      }
+      if (sensor3 < 60){
+        $(right).addClass('zero').removeClass('one two three four five six seven eight nine ten');
+      } else if (sensor3 > 60 && sensor3 < 120) {
+        $(right).addClass('one').removeClass('zero two three four five six seven eight nine ten');
+      } else if (sensor3 > 120 && sensor3 < 180) {
+        $(right).addClass('two').removeClass('zero one three four five six seven eight nine ten');
+      } else if (sensor3 > 180 && sensor3 < 240) {
+        $(right).addClass('three').removeClass('zero one two four five six seven eight nine ten');
+      } else if (sensor3 > 240 && sensor3 < 300) {
+        $(right).addClass('four').removeClass('zero one two three five six seven eight nine ten');
+      } else if (sensor3 > 300 && sensor3 < 360) {
+        $(right).addClass('five').removeClass('zero one two three four six seven eight nine ten');
+      } else if (sensor3 > 360 && sensor3 < 420) {
+        $(right).addClass('six').removeClass('zero one two three four five seven eight nine ten');
+      } else if (sensor3 > 420 && sensor3 < 480) {
+        $(right).addClass('seven').removeClass('zero one two three four five six eight nine ten');
+      } else if (sensor3 > 480 && sensor3 < 540) {
+        $(right).addClass('eight').removeClass('zero one two three four five six seven nine ten');
+      } else if (sensor3 > 540 && sensor3 < 600) {
+        $(right).addClass('nine').removeClass('zero one two three four five six seven eight ten');
+      } else {
+        $(right).addClass('ten').removeClass('zero one two three four five six seven eight nine');
+      }
+      }
+      });
+    }, 1000);
+  </script>
+</html>
