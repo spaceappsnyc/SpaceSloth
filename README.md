@@ -1,7 +1,7 @@
 # SpaceSloth
 Welcome to the SpaceSloth Helmet!
 
-As a team of 6 people at the Space Apps NYC Hackathon 2015 we created a sensing helmet that would record and process measurements from and through:
+As a team of 7 people at the Space Apps NYC Hackathon 2015 we created a sensing helmet that would record and process measurements from and through:
 * 5 IR proximity sensors (4-30 cm range) 
 * 1 LIDAR Lite (Range: 0-40m Laser Emitter, Accuracy: +/- 0.025m) 
 * 1 Logitech camera 
